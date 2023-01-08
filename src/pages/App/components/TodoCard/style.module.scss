@@ -1,0 +1,35 @@
+@import '@/styles/mixins.scss';
+
+.todoCard {
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: grab;
+
+  .trashCan {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    border-radius: 999px;
+    transition: background-color 0.2s var(--transition-timing-function);
+
+    path {
+      fill: var(--gray-300);
+      transition: fill 0.2s var(--transition-timing-function);
+    }
+
+    @include hover {
+      background-color: var(--gray-400);
+
+      path {
+        fill: var(--gray-200);
+      }
+    }
+  }
+}

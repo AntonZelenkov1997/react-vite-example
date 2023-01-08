@@ -1,0 +1,42 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .container {
+      max-width: 736px;
+      width: 100%;
+
+      .todoInput {
+        display: flex;
+        column-gap: 8px;
+        transform: translateY(-50%);
+      }
+    }
+
+    .listContainer {
+      margin-top: 29px;
+      display: flex;
+      flex-direction: column;
+
+      .listHeader {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        .allTasks {
+          color: var(--blue);
+        }
+
+        .currentTasks {
+          color: var(--purple);
+        }
+      }
+    }
+  }
+}

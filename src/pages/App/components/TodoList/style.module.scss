@@ -1,0 +1,11 @@
+.todoList {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  .draggable {
+    opacity: .5;
+  }
+}

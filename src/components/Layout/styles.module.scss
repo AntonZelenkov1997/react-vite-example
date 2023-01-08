@@ -1,0 +1,10 @@
+.layout {
+    background-color: var(--eerie);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @media screen and (width < 1024px) {
+        padding: 0 30px;
+    }
+}

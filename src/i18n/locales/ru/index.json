@@ -1,0 +1,30 @@
+{
+  "App": {
+    "TodoList": {
+      "TodoCard": {
+        "Remove": "Удалить"
+      },
+      "TodoEmpty": {
+        "Title": "У вас еще нет зарегистрированных задач",
+        "SubTitle": "Создавайте задачи и организуйте свои дела"
+      },
+      "TodoInput": {
+        "Placeholder": "Создайте задачу..."
+      },
+      "TodoButton": {
+        "Text": "Добавить"
+      },
+      "TodoStatus": {
+        "AllTasks": "Задачи",
+        "CurrentTasks": "Завершённые"
+      }
+    },
+    "Themes": {
+      "Switch": {
+        "Tooltip": {
+          "Title": "Сменить тему"
+        }
+      }
+    }
+  }
+}

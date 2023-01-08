@@ -1,0 +1,66 @@
+.todoCheckbox {
+  cursor: pointer;
+  user-select: none;
+  display: block;
+  position: relative;
+  padding-left: 36px;
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  line-height: 140%;
+
+  &:hover input ~ .checkmark {
+    background-color: var(--gray-300);
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked {
+      & ~ .checkmark {
+        background-color: var(--purple);
+        border-color: var(--purple);
+
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      & ~ .label {
+        color: var(--gray-300);
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1;
+    width: 21px;
+    background-color: transparent;
+    transition: background-color 0.2s var(--transition-timing-function);
+    border: 2px solid var(--blue);
+    border-radius: 100%;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      transition: opacity 0.2s var(--transition-timing-function);
+      opacity: 0;
+      left: 50%;
+      top: 50%;
+      aspect-ratio: 1 / 2;
+      width: 20%;
+      border: solid var(--gray-100);
+      border-width: 0 2px 2px 0;
+      translate: -50% -60%;
+      transform: rotate(45deg);
+    }
+  }
+}

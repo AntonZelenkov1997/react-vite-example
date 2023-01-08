@@ -1,0 +1,59 @@
+@mixin theme($theme) {
+  @if ($theme == dark) {
+    --gray-100: #f2f2f2;
+    --gray-200: #d9d9d9;
+    --gray-300: #808080;
+    --gray-400: #333333;
+    --gray-500: #262626;
+    --gray-600: #1a1a1a;
+    --gray-700: #0d0d0d;
+    --eerie: #191919;
+    --purple: #8284fa;
+    --purple-dark: #5e60ce;
+    --blue: #4ea8de;
+    --blue-dark: #1e6f9f;
+    --danger: #e25858;
+
+    --blue-dark-hover: hsl(202, 68%, 27%);
+
+    --transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+
+  @if ($theme == light) {
+    --gray-100: #0d0d0d;
+    --gray-200: #262626;
+    --gray-300: #7f7f7f;
+    --gray-400: #cccccc;
+    --gray-500: #d9d9d9;
+    --gray-600: #e5e5e5;
+    --gray-700: #f2f2f2;
+    --eerie: #e6e6e6;
+    --purple: #7d7b05;
+    --purple-dark: #a19f31;
+    --blue: #b15721;
+    --blue-dark: #e19060;
+    --danger: #e25858;
+    --blue-dark-hover: hsl(22, 68%, 53%);
+    --transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+}
+
+:root {
+  @include theme(dark);
+
+  @media (prefers-color-scheme: dark) {
+    @include theme(dark);
+  }
+
+  @media (prefers-color-scheme: light) {
+    @include theme(light);
+  }
+
+  &[data-theme='Dark'] {
+    @include theme(dark);
+  }
+
+  &[data-theme='Light'] {
+    @include theme(light);
+  }
+}

@@ -1,0 +1,19 @@
+@import '@/styles/mixins.scss';
+
+.todoButton {
+  padding: 1rem;
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  display: flex;
+  column-gap: 8px;
+  background-color: var(--blue-dark);
+  transition: background-color 0.2s var(--transition-timing-function);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-700);
+
+  @include hover {
+    background-color: var(--blue-dark-hover);
+  }
+}

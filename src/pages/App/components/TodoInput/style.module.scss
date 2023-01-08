@@ -1,0 +1,38 @@
+@import '@/styles/mixins.scss';
+
+.todoInput {
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+  background-color: var(--gray-500);
+  overflow: hidden;
+  display: flex;
+  flex-grow: 1;
+
+  &__text {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
+    color: var(--gray-100);
+
+    &::placeholder {
+      color: var(--gray-300);
+    }
+  }
+
+  &__clear {
+    background-color: transparent;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--gray-300);
+    font-size: 1.2rem;
+    transition: color 0.2s var(--transition-timing-function);
+
+    @include hover {
+      color: var(--gray-200);
+    }
+  }
+}

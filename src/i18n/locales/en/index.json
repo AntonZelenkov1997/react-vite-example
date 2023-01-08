@@ -1,0 +1,30 @@
+{
+  "App": {
+    "TodoList": {
+      "TodoCard": {
+        "Remove": "Remove"
+      },
+      "TodoEmpty": {
+        "Title": "You don't have any registered tasks yet",
+        "SubTitle": "Create tasks and organize your affairs"
+      },
+      "TodoInput": {
+        "Placeholder": "Type something..."
+      },
+      "TodoButton": {
+        "Text": "Add"
+      },
+      "TodoStatus": {
+        "AllTasks": "Tasks",
+        "CurrentTasks": "Completed"
+      }
+    },
+    "Themes": {
+      "Switch": {
+        "Tooltip": {
+          "Title": "Change theme"
+        }
+      }
+    }
+  }
+}

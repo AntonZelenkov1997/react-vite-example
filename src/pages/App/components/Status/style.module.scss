@@ -1,0 +1,19 @@
+.status {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+
+  &__title {
+    color: var(--gray-400);
+  }
+
+  &__value {
+    background-color: var(--gray-400);
+    border-radius: 999px;
+    padding: 3px 8px;
+    color: var(--gray-200);
+    line-height: 1;
+  }
+}

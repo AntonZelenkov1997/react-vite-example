@@ -1,0 +1,42 @@
+@import 'normalize.css/normalize.css';
+@import './fonts.scss';
+@import './themes.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+button,
+*[role='button'] {
+  cursor: pointer;
+  padding: unset;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: unset;
+}
+
+p {
+  margin: 0;
+}
+
+.themeTransition {
+  * {
+    transition: background-color 0.2s var(--transition-timing-function),
+      color 0.2s var(--transition-timing-function),
+      fill 0.2s var(--transition-timing-function),
+      border-color 0.2s var(--transition-timing-function);
+  }
+}
